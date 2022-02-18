@@ -1,0 +1,58 @@
+/*----------------------------------------------------------------*/
+/*---------------SKILLS / TECNOLOGIAS-------------------------------*/
+/*----------------------------------------------------------------*/
+.skillsContainer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  place-items: center;
+  gap: 20px;
+}
+.skillsContainer img {
+  width: 100%;
+  object-fit: contain;
+  filter: grayscale(1);
+  transition: 0.3s;
+}
+img.styled {
+  max-height: 150px;
+}
+/*-------EFECTO HOVER/GREY SCALE-------*/
+.skillsContainer img:hover {
+  filter: grayscale(0);
+  transform: translateY(5px);
+  transform: scale(1.05);
+}
+/*-------Delimitando items tech skills grid----*/
+.node {
+  grid-column: 2/4;
+}
+.express {
+  grid-column: 4/6;
+}
+.skillsContainer .span2 {
+  grid-column: span 2;
+}
+/*----ableton y photoshop son muy grandes-------*/
+.skillsContainer img.photo {
+  max-height: 150px;
+}
+@media screen and (max-width: 710px) {
+  .skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .skillsContainer img {
+    flex: 1 1 50%;
+    max-width: 45%;
+  }
+  .skillsContainer img.photo {
+    max-height: 100px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .skillsContainer img {
+    max-width: 100%;
+  }
+}

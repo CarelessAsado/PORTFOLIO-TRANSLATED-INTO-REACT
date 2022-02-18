@@ -1,0 +1,140 @@
+/*----------------------------------------------------------------*/
+/*-------------------CONTACTO-------------------------------*/
+/*----------------------------------------------------------------*/
+#contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.contactoGridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
+  padding-top: 40px;
+}
+.contactoGridIzq {
+  align-self: flex-start;
+  justify-self: start;
+  font-size: var(--fontMed);
+}
+.emailInfoContacto,
+.celularInfoContacto {
+  padding-bottom: 40px;
+  letter-spacing: 2px;
+}
+.emailInfoContacto i,
+.celularInfoContacto i {
+  padding-right: 10px;
+  color: #18a096;
+}
+/*-----------------CONTACT FORM----------------------*/
+
+#contactForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+/*------Distribucion contact form------*/
+#contactForm .span2 {
+  grid-column: 1 /-1;
+}
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: var(--fontMed);
+  background-color: inherit;
+  border: 1px solid rgba(57, 133, 136, 0.705);
+  color: inherit;
+  transition: 0.3s;
+}
+#contactForm #botonEnviarForm {
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #18a096;
+  border: 1px solid #164b3f;
+  letter-spacing: 2px;
+  color: rgb(11, 48, 83);
+}
+#contactForm #botonEnviarForm:hover {
+  background-color: inherit;
+  color: #18a096;
+}
+
+/*--------------------------------------MAGIA DEL PLACEHOLDER DEL CONTACT FORM/*---------------------------------------------------------*/
+#contactForm .inputPosta {
+  border-style: none none solid none;
+}
+#contactForm .inputPosta:focus,
+#contactForm textarea:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: orange;
+  transform: scale(1.03);
+}
+#contactForm .inputPosta:focus + label,
+#contactForm textarea:focus + label {
+  color: orange;
+}
+/*----placeholder magic----------*/
+#contactForm .inputPosta::placeholder,
+textarea::placeholder {
+  color: transparent;
+}
+/*----aca estan todas las label juntas,
+-----+ abajo estilicé el label de 
+-----textarea x separado*/
+#contactForm label {
+  display: block;
+  color: rgb(161, 157, 157);
+  transform-origin: 0 0;
+  transition: 0.3s;
+}
+/*----label textarea----*/
+label#textAreaLabel {
+  transform: translateY(-7.5rem);
+  padding-left: 5px;
+}
+/*-----resto de las labels*/
+#contactForm .input label {
+  transform: translateY(-2rem);
+}
+/*------------el transform translate no lo podia editar dos veces, 
+por ende el textarea label no se movía a donde quería, no sacar*/
+
+#contactForm .inputPosta:focus + label,
+#contactForm .inputPosta:not(:placeholder-shown) + label {
+  transform: translateY(-3rem) scale(0.9);
+}
+#contactForm textarea:focus + label,
+#contactForm textarea:not(:placeholder-shown) + label {
+  transform: translateY(-9.5rem) scale(0.9);
+}
+
+/*--------------------------------------MAGIA DEL PLACEHOLDER DEL CONTACT FORM/*---------------------------------------------------------*/
+
+@media screen and (max-width: 937px) {
+  .contactoGridContainer {
+    grid-template-columns: 1fr;
+  }
+  .contactoGridDcha {
+    padding-top: 15px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .contactoGridIzq {
+    font-size: 15px;
+  }
+  .emailInfoContacto,
+  .celularInfoContacto {
+    letter-spacing: 0.5px;
+  }
+  .emailInfoContacto i,
+  .celularInfoContacto i {
+    padding-right: 5px;
+    color: #18a096;
+  }
+  #contactForm {
+    grid-template-columns: 1fr;
+  }
+}

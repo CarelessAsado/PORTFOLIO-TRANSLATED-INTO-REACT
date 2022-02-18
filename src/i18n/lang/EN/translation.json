@@ -1,0 +1,66 @@
+{
+  "about": "About me",
+  "projects": "Projects",
+  "skills": "Technologies",
+  "contact": "Contact",
+  "name": "Name",
+  "subject": "Subject",
+  "send": "Send",
+  "message": "Message",
+  "introsub": "Full-stack web developer",
+  "introsub2": "View my projects",
+  "hello": "Hello",
+  "greeting": "Nice to meet you, my name is Rodrigo",
+  "git": "REPOSITORY",
+  "aboutTitle": "Full-stack web developer in React, Typescript, MongoDb, Nodejs and Javascript",
+  "about1": "I am originally from Buenos Aires, Argentina. Years of university education and my fluency in languages (mainly English and French), have allowed me to develop excellent problem-solving skills.",
+  "about2": "I am currently building projects with",
+  "about2bis": "and I strive daily to acquire new technical knowledge to help solve day-to-day problems individuals and companies may encounter.",
+  "about3": "I love learning and everyday I take steps towards self-improvement. If you have an idea or project you would like to bring to life, feel free to contact me.",
+  "aboutEnd": "Get to know me better.",
+  "pdf": "Eng",
+  "dataprojects": [
+    {
+      "descripcion": "A React app that consumes a Node.js API. User authentication is carried out with JsonWebToken. Mongodb/Mongoose was used for the database and Styled-components for the styling. Both back end and front end were coded in Typescript.",
+
+      "alt": "TYPESCRIPT/REACT/NODE APP",
+
+      "titulo": "Typescript/React app"
+    },
+    {
+      "descripcion": "Portfolio that I originally built with pure Javascript and that I later translated into React. I used the Intersection Observer API, and translated the content with the help of React-i18n.",
+
+      "alt": "PORTFOLIO",
+
+      "titulo": "From Javascript to React"
+    },
+    {
+      "descripcion": "Task management system I built with React and JWT authentification. It communicates with a Node.js API and a Mongo Atlas database.",
+
+      "alt": "MERN project",
+
+      "titulo": "MERN PROJECT"
+    },
+    {
+      "descripcion": "Replica of the famous site. Following registration and log in, users have access to a public area where they can post messages, and an additional private route where they can view and edit their user info.",
+
+      "alt": "Rodribook project",
+
+      "titulo": "RODRIBOOK WEBSITE"
+    },
+    {
+      "descripcion": "Blackjack game I built based on a Free Code Camp project, to which I later added upgrades: notifications on the state of the game, a dealer bot, user interface to place bets, etc.",
+
+      "alt": "Blackjack project",
+
+      "titulo": "BLACKJACK GAME"
+    },
+    {
+      "descripcion": "My first website.",
+
+      "alt": "Rohelaw project",
+
+      "titulo": "ROHELAW WEBSITE"
+    }
+  ]
+}

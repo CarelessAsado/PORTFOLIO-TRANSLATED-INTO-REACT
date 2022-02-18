@@ -1,0 +1,285 @@
+/*-------------------------------------------------------*/
+/*------------PROYECTOS---------------------------------*/
+/*-------------------------------------------------------*/
+.proyectosGridContainer {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+.proyectoItem {
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    11px 1px 10px 7px rgba(77, 184, 147, 0);
+  box-shadow: 0px 10px 13px -7px #000000,
+    11px 1px 10px 7px rgba(77, 184, 147, 0);
+  transition: 0.5s;
+  overflow: hidden;
+  position: relative;
+  border: #8d9c93 2px solid;
+}
+.imgContainer {
+  height: 550px;
+  height: 100%;
+  max-width: 1000px;
+}
+.proyectoItem:hover {
+  transform: translateY(-10px);
+  border-color: #3c82ec;
+}
+
+.projectFooter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: url("./texture.png");
+}
+.footerOverlay {
+  background-color: rgba(0, 0, 0, 0.945);
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  transition: 0.8s;
+  width: 100%;
+  height: 60px;
+}
+.proyectosGridContainer img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.6s;
+  filter: grayscale(0.5);
+}
+.proyectoItem:hover img {
+  filter: grayscale(0);
+}
+.proyectoItem:hover .footerOverlay {
+  background-color: rgba(0, 0, 0, 0.281);
+}
+.proyectoOverlay {
+  font-family: "Julius Sans One";
+  background: linear-gradient(0deg, #000, rgba(0, 0, 0, 0.76));
+  position: absolute;
+  left: 0;
+  top: calc(100% - 180px);
+  height: 100%;
+  width: 100%;
+  color: white;
+  transition: 0.5s;
+}
+.proyectoItem .textMargin {
+  width: 50%;
+  margin: 100px auto 280px auto;
+  display: grid;
+  place-items: center;
+  gap: 40px;
+}
+.proyectoOverlay .titleProject {
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.descriptionProject {
+  text-align: justify;
+  color: #909299;
+  letter-spacing: 1px;
+}
+.linksProject {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: bold;
+}
+.btnSvg {
+  display: flex;
+  border: 1px solid white;
+  color: white;
+  transition: 0.3s;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+  padding: 5px 3px;
+  font-size: 13px;
+}
+svg {
+  height: 30px;
+  margin-left: 5px;
+  fill: white;
+}
+.btnSvg:hover {
+  background-color: white;
+  color: black;
+  border: white;
+}
+.btnSvg:hover svg.MuiSvgIcon-root {
+  fill: #3c82ec;
+}
+.tecnologiasProject {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.tecnologiasProject h4 {
+  padding: 10px;
+  color: #18a096;
+}
+.tecnologiasProject h4:hover {
+  color: #17ebdde3;
+}
+.imgContainer:hover .proyectoOverlay {
+  top: 0;
+}
+.additionalInfo {
+  display: none;
+}
+#restOfTheInfo {
+  transition: 0.5s;
+  width: 100%;
+  position: absolute;
+  top: 55px;
+  left: -100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  gap: 15px;
+  padding: 30px 150px 30px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 960px) {
+  .proyectoItem .textMargin {
+    margin: 60px auto 200px auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .proyectoItem .textMargin {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .proyectoItem .textMargin {
+    width: 95%;
+    gap: 15px;
+  }
+  .descriptionProject {
+    padding-top: 25px;
+  }
+}
+/*-------------OVERLAY HOVER------------------------*/
+/*de 710 para abajo parece estar todo bien, para arriba falta un poco, en 740 x ej hay un corte*/
+@media screen and (max-width: 710px) {
+  .descriptionProject {
+    padding-top: 0px;
+  }
+  .additionalInfo {
+    display: block;
+    border-radius: 50%;
+    background-color: #1877f2;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .flex {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: #abb0b4;
+  }
+  .additionalInfo:hover + #restOfTheInfo,
+  #restOfTheInfo:hover {
+    transition: 0.5s;
+    left: 0;
+    background-color: #1877f2;
+  }
+  .descriptionProject,
+  .tecnologiasProject {
+    display: none;
+  }
+  .proyectoItem .textMargin {
+    width: 50%;
+    margin: 100px auto 280px auto;
+  }
+  .proyectoOverlay {
+    top: calc(100% - 180px);
+  }
+  #restOfTheInfo {
+    letter-spacing: 1px;
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .projectFooter,
+  .footerOverlay {
+    height: 30px;
+  }
+  .proyectoItem .textMargin {
+    width: 60%;
+    margin: 50px auto 280px auto;
+    gap: 50px;
+  }
+  .proyectoOverlay {
+    top: calc(100% - 120px);
+  }
+  #restOfTheInfo {
+    gap: 0px;
+  }
+  #restOfTheInfo {
+    bottom: 0;
+    top: 0;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 490px) {
+  #restOfTheInfo {
+    padding: 5px 2px 30px;
+  }
+  .flex {
+    padding-top: 5px;
+  }
+
+  .proyectoItem .textMargin {
+    gap: 20px;
+  }
+  .proyectoOverlay {
+    top: calc(100% - 110px);
+  }
+}
+@media screen and (max-width: 440px) {
+  .proyectoItem .textMargin {
+    width: 90%;
+  }
+  .projectFooter,
+  .footerOverlay {
+    display: none;
+  }
+  .proyectoOverlay {
+    top: calc(100% - 80px);
+  }
+  .additionalInfo {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    right: 7px;
+    top: 7px;
+  }
+  #restOfTheInfo {
+    letter-spacing: 0px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #restOfTheInfo {
+    font-size: var(--fontAgustinRocha);
+    padding: 5px 2px 10px;
+    justify-content: space-around;
+  }
+  .flex {
+    flex-wrap: wrap;
+    padding-top: 5px;
+  }
+}

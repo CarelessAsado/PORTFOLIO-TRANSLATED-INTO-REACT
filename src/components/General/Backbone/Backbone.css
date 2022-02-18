@@ -1,0 +1,17 @@
+#backBone {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#backBone > * {
+  opacity: 0.2;
+  background-color: #a4acc4;
+  width: 1px;
+}

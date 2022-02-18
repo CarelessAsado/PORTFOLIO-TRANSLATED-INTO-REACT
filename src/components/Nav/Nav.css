@@ -1,0 +1,238 @@
+/*-----------------------NAV- --------------------------------------*/
+/* Animacion nav*/
+@keyframes arriba {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+nav {
+  animation: arriba 400ms;
+}
+
+/*--------CENTRO IMG LOGO Y CORTO OVERFLOW-------*/
+.logo {
+  cursor: pointer;
+  /*----sino no anda el pointer-*/
+  z-index: 300;
+  height: 52px;
+  width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: white;
+  border: none;
+}
+.logo #logoRHL {
+  height: 130px;
+  width: 130px;
+}
+/*----------------------------------------------*/
+nav {
+  text-transform: uppercase;
+  background-color: transparent;
+  opacity: 0.98;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 150px;
+  height: 60px;
+  z-index: 500;
+  transition: 0.3s;
+}
+/*---------------INTERSECTION OBSERVER----------------*/
+nav.afterScroll {
+  background-color: rgb(11, 48, 83);
+}
+/*---------------------------------------------*/
+.nav-center {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-button {
+  height: 40px;
+  width: 40px;
+  border: 1px white solid;
+  border-radius: 10px;
+  display: none;
+}
+.nav-button:hover {
+  cursor: pointer;
+}
+.burger-dash {
+  height: 2px;
+  width: 25px;
+  border-radius: 7px;
+  background-color: white;
+  border-style: none;
+  position: relative;
+}
+.burger-dash::before {
+  width: 25px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  content: "";
+  height: 2px;
+  background-color: white;
+  border-radius: 7px;
+}
+.burger-dash::after {
+  width: 25px;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  content: "";
+  height: 2px;
+  background-color: white;
+  border-radius: 7px;
+}
+.links {
+  display: flex;
+  align-items: center;
+}
+ul {
+  list-style: none;
+}
+nav li {
+  color: var(--fbFontColorNormal);
+  font-weight: 300;
+  font-size: var(--fontMed);
+  margin: 0 5px;
+  cursor: pointer;
+  padding: 5px;
+  transition: var(--transition);
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav a::after {
+  content: "";
+  display: flex;
+  border: 2px solid #18a096;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+nav a.lineHover::after {
+  transform: scaleX(1);
+  transition: 0.5s;
+}
+.fa-globe {
+  font-size: 2rem;
+}
+.language-selector {
+  position: relative;
+}
+.languageOptions {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: transparent;
+  padding: 5px;
+  transition: 0.3s;
+  transform-origin: top;
+  transform: scaleY(0);
+}
+.language-selector:hover .languageOptions {
+  transform: scaleY(1);
+}
+.languageOptions .banderas {
+  filter: grayscale(0.5);
+  transition: 0.3s;
+}
+.languageOptions .banderas:hover {
+  filter: grayscale(0);
+}
+/*-----------------------------RESPONSIVE NAVBAR------------------------------*/
+@media only screen and (max-width: 1200px) {
+  nav {
+    padding: 0 50px;
+  }
+}
+@media only screen and (max-width: 855px) {
+  nav {
+    padding: 0 20px;
+  }
+  nav li {
+    font-size: 1rem;
+  }
+}
+/*-------------------------------RESPONSIVE BURGER MENU-------------------------*/
+@media screen and (max-width: 750px) {
+  /*-----------------CON ESTO DESHABILITO EL UNDERLINE EFFECT DEL INTERSECTION OBSERVER--------------*/
+  nav a.lineHover::after {
+    transform: scaleX(0);
+  }
+  /* sino saco padding me sobresale el nav en absolute*/
+  nav {
+    padding: 0;
+  }
+  .nav-header {
+    padding: 0 30px 0 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .links {
+    color: #18a096;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    transition: var(--transition);
+  }
+  /*----mantiene el texto de los links centrado*/
+  nav li {
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+  }
+  /*-----show links--------*/
+  .links.active {
+    left: 0;
+  }
+  /*-----links sin intersection observer----------*/
+  .links.active li:hover {
+    color: rgb(81, 196, 211);
+    background-color: rgb(5, 4, 4);
+  }
+  /*--------------links del nav azul con intersection observer*/
+  nav.afterScroll .links {
+    background-color: rgb(11, 48, 83);
+  }
+  /*-------links del nav hover------------*/
+  nav.afterScroll .links li:hover {
+    background-color: rgb(7, 32, 56);
+    color: white;
+  }
+}

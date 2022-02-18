@@ -1,0 +1,99 @@
+/*------------------------------PRELOADER----------------------*/
+#preloader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(25, 27, 34);
+}
+#preloader .back {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 80px;
+  color: black;
+  text-align: center;
+}
+.back h2 {
+  padding: 0 10px 20px;
+  letter-spacing: 2px;
+}
+#preloader .ico {
+  padding: 0 30px;
+}
+.lds-dual-ring {
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:before {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*-------fade out animation-------*/
+#preloader.nosvimos {
+  animation: vanish 0.5s forwards;
+}
+@keyframes vanish {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/*---------ANIMACION LETRAS BIENVENIDO-----------------*/
+#preloader .containerAnimacion {
+  overflow: hidden;
+  position: relative;
+  height: 65px;
+}
+.containerAnimacion li {
+  font-family: "Roboto Condensed", cursive;
+  color: rgb(25, 27, 34);
+  font-size: 36px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 0 10px;
+  height: 45px;
+  margin-bottom: 45px;
+}
+.flip {
+  animation: flip2 4s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+@keyframes flip2 {
+  0% {
+    margin-top: -180px;
+  }
+  5% {
+    margin-top: -90px;
+  }
+  50% {
+    margin-top: -90px;
+  }
+  55% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
