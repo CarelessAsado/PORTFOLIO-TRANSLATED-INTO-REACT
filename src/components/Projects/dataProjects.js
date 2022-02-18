@@ -14,7 +14,7 @@ export const dataProjects = [
     alt: "",
     tecnologias: ["React", "Intersection Observer", "i18n"],
     titulo: "",
-    github: "https://github.com/CarelessAsado/REACT-PORTFOLIO",
+    github: "https://github.com/CarelessAsado/PORTFOLIO-TRANSLATED-INTO-REACT",
     web: "https://www.rodrigohernanlopez.com.ar/",
   },
   {
