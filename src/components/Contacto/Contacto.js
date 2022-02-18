@@ -68,7 +68,6 @@ export const Contacto = () => {
             </div>
             <div className="inputControl span2">
               <textarea
-                name=""
                 id="mensaje"
                 rows="5"
                 placeholder="Mensaje *"

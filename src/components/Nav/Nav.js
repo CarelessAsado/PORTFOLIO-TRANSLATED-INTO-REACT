@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./Nav.css";
+import { HashLink } from "react-router-hash-link";
+
 import { useTranslation } from "react-i18next";
 import { Flags } from "../Flags/Flags";
 export const Nav = ({ navColor, sectionIntersected }) => {
@@ -16,9 +18,9 @@ export const Nav = ({ navColor, sectionIntersected }) => {
       <div className="nav-center">
         <div className=" nav-header espaciar">
           <div className="logo">
-            <a href="#">
+            <HashLink to="#">
               <img id="logoRHL" src="/img/logo.png" alt="logoHome" />
-            </a>
+            </HashLink>
           </div>
 
           <div className="nav-button" onClick={() => setNavOpen(!navOpen)}>
@@ -28,8 +30,8 @@ export const Nav = ({ navColor, sectionIntersected }) => {
 
         <ul className={`links ${navOpen && "active"}`}>
           <li>
-            <a
-              href="#about"
+            <HashLink
+              to="#about"
               id="aboutHover"
               className={
                 sectionIntersected === "about" ? "lineHover" : undefined
@@ -37,12 +39,12 @@ export const Nav = ({ navColor, sectionIntersected }) => {
               onClick={() => setNavOpen(false)}
             >
               {t("about")}
-            </a>
+            </HashLink>
           </li>
 
           <li>
-            <a
-              href="#proyectos"
+            <HashLink
+              to="#proyectos"
               id="proyectosHover"
               className={
                 sectionIntersected === "proyectos" ? "lineHover" : undefined
@@ -50,11 +52,11 @@ export const Nav = ({ navColor, sectionIntersected }) => {
               onClick={() => setNavOpen(false)}
             >
               {t("projects")}
-            </a>
+            </HashLink>
           </li>
           <li>
-            <a
-              href="#skills"
+            <HashLink
+              to="#skills"
               id="skillsHover"
               className={
                 sectionIntersected === "skills" ? "lineHover" : undefined
@@ -62,11 +64,11 @@ export const Nav = ({ navColor, sectionIntersected }) => {
               onClick={() => setNavOpen(false)}
             >
               {t("skills")}
-            </a>
+            </HashLink>
           </li>
           <li>
-            <a
-              href="#contacto"
+            <HashLink
+              to="#contacto"
               id="contactoHover"
               className={
                 sectionIntersected === "contacto" ? "lineHover" : undefined
@@ -74,12 +76,12 @@ export const Nav = ({ navColor, sectionIntersected }) => {
               onClick={() => setNavOpen(false)}
             >
               {t("contact")}
-            </a>
+            </HashLink>
           </li>
           <li className="language-selector">
-            <a>
+            <span>
               <i className="fas fa-globe"></i>
-            </a>
+            </span>
             <div className={"languageOptions"}>
               {languages.map((code) => {
                 return (
