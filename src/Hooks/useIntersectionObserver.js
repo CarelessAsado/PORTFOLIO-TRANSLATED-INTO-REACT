@@ -5,7 +5,6 @@ export const useIntersectionObserver = (options) => {
   const [elements, setElements] = useState([]);
   //ARRAY DE ENTRIES Q ME DEVUELVE USEREF.CURRENT
   const [entries, setEntries] = useState([]);
-
   const myObserver = useRef(
     new IntersectionObserver(function (entries) {
       setEntries(entries);
@@ -17,11 +16,12 @@ export const useIntersectionObserver = (options) => {
         myObserver.current.observe(e);
       });
     }
-    return () => {
+    /*  return () => {
+     
       if (myObserver.current) {
         myObserver.current.disconnect();
       }
-    };
+    }; */
   }, [elements]);
   return [myObserver.current, setElements, entries];
 };

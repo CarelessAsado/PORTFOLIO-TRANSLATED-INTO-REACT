@@ -18,8 +18,8 @@ function App() {
   const [whatsAppLogo, setWhatsAppLogo] = useState(false);
   const [sectionIntersected, setSectionIntersected] = useState("");
   useEffect(() => {
-    let sections = document.querySelectorAll("section");
-    setElements(sections);
+    let arrayOfSections = document.querySelectorAll("section");
+    setElements(arrayOfSections);
   }, [setElements]);
 
   useEffect(() => {
