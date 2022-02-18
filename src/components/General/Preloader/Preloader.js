@@ -14,7 +14,7 @@ export const Preloader = () => {
         <img className="ico" src="./img/ico.ico" alt="preloader"></img>
 
         <div className="containerAnimacion">
-          <ul class="flip">
+          <ul className="flip">
             <li>Welcome</li>
             <li>Bienvenue</li>
             <li>Bienvenido</li>

@@ -31,7 +31,9 @@ export const Nav = ({ navColor, sectionIntersected }) => {
             <a
               href="#about"
               id="aboutHover"
-              class={sectionIntersected === "about" ? "lineHover" : undefined}
+              className={
+                sectionIntersected === "about" ? "lineHover" : undefined
+              }
               onClick={() => setNavOpen(false)}
             >
               {t("about")}
@@ -42,7 +44,7 @@ export const Nav = ({ navColor, sectionIntersected }) => {
             <a
               href="#proyectos"
               id="proyectosHover"
-              class={
+              className={
                 sectionIntersected === "proyectos" ? "lineHover" : undefined
               }
               onClick={() => setNavOpen(false)}
@@ -54,7 +56,9 @@ export const Nav = ({ navColor, sectionIntersected }) => {
             <a
               href="#skills"
               id="skillsHover"
-              class={sectionIntersected === "skills" ? "lineHover" : undefined}
+              className={
+                sectionIntersected === "skills" ? "lineHover" : undefined
+              }
               onClick={() => setNavOpen(false)}
             >
               {t("skills")}
@@ -64,7 +68,7 @@ export const Nav = ({ navColor, sectionIntersected }) => {
             <a
               href="#contacto"
               id="contactoHover"
-              class={
+              className={
                 sectionIntersected === "contacto" ? "lineHover" : undefined
               }
               onClick={() => setNavOpen(false)}
