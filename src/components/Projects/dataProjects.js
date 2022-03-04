@@ -25,7 +25,7 @@ export const dataProjects = [
     titulo: "PROYECTO MERN",
     github:
       "https://github.com/CarelessAsado/MERN-gestordetareas/tree/main/MERN",
-    web: "https://tender-allen-b77235.netlify.app/",
+    web: "https://frosty-archimedes-bb3dfe.netlify.app/",
   },
   {
     descripcion:
