@@ -23,8 +23,7 @@ export const dataProjects = [
     alt: "",
     tecnologias: ["React", "Nodejs", "JWT", "Mongoose"],
     titulo: "PROYECTO MERN",
-    github:
-      "https://github.com/CarelessAsado/MERN-gestordetareas/tree/main/MERN",
+    github: "https://github.com/CarelessAsado/MERN-TaskManagement",
     web: "https://frosty-archimedes-bb3dfe.netlify.app/",
   },
   {
