@@ -1,0 +1,24 @@
+#successMsg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#successMsg .fa-check-circle {
+  font-size: 10rem;
+  color: green;
+}
+#successMsg .successText {
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 2.5rem;
+}
+#successMsg .successText {
+  font-size: 1.2rem;
+}
+#successMsg .successText h2 {
+  letter-spacing: 2px;
+}

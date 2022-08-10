@@ -3,6 +3,8 @@
   "projects": "Projects",
   "skills": "Technologies",
   "contact": "Contact",
+  "thanks": "Thank you",
+  "successMessage": "Your message has been successfully submitted. Rodrigo will get in touch with you soon.",
   "name": "Name",
   "subject": "Subject",
   "send": "Send",
