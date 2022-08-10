@@ -21,7 +21,7 @@ export default class User {
   @Column(/* { default: false, nullable: true } */)
   city: string;
 
-  @Column({ default: 0 })
+  @Column()
   visits: number;
 
   @UpdateDateColumn()
@@ -33,6 +33,10 @@ export default class User {
   @BeforeInsert()
   updateVisits() {
     console.log(this.visits, "ver q pasa");
-    this.visits = this.visits++;
+    if (!this.visits) {
+      this.visits = 0;
+      return;
+    }
+    return (this.visits = this.visits++);
   }
 }
