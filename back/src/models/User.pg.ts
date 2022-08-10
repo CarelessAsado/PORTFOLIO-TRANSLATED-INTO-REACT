@@ -1,4 +1,11 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  UpdateDateColumn,
+  CreateDateColumn,
+  BeforeInsert,
+} from "typeorm";
 
 @Entity()
 export default class User {
@@ -13,6 +20,19 @@ export default class User {
 
   @Column(/* { default: false, nullable: true } */)
   city: string;
-  @Column({ default: 1 })
+
+  @Column({ default: 0 })
   visits: number;
+
+  @UpdateDateColumn()
+  updatedAt: Date;
+
+  @CreateDateColumn()
+  createdAt: Date;
+
+  @BeforeInsert()
+  updateVisits() {
+    console.log(this.visits, "ver q pasa");
+    this.visits = this.visits++;
+  }
 }

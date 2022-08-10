@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 });
 app.get("/api/v1", async (req, res) => {
   let ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress || "";
-  console.log("IP: ", ip);
+  console.log("'IP: '", ip);
   console.log(req.headers["x-forwarded-for"]);
   if (typeof ip === "string" && ip.substring(0, 7) === "::ffff:") {
     ip = ip.substring(7);
@@ -58,7 +58,7 @@ app.get("/api/v1", async (req, res) => {
       console.log("error looking up geoIp");
       return res.sendStatus(400);
     }
-    foundUser.visits = foundUser.visits++;
+    //we just save and the method on the User model will update the visits
     await repoMachine.User.save(foundUser);
     res.sendStatus(200);
   }
