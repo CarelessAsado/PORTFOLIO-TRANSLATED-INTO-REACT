@@ -4,7 +4,7 @@ import "reflect-metadata";
 const app = express();
 import cors from "cors";
 import sendEmail from "./nodemailer";
-import { connectPostgres } from "./db/postgres";
+import repoMachine, { connectPostgres } from "./db/postgres";
 import geoip from "geoip-lite";
 
 /* import { FRONTEND_URL } from "./constants"; */
@@ -32,19 +32,39 @@ connectServer();
 app.get("/", (req, res) => {
   res.send("hola");
 });
-app.get("/api/v1", (req, res) => {
+app.get("/api/v1", async (req, res) => {
   let ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress || "";
-  console.log(ip);
-  if (typeof ip === "string" && ip.substring(0, 7) == "::ffff:") {
+  console.log("IP: ", ip);
+  console.log(req.headers["x-forwarded-for"]);
+  if (typeof ip === "string" && ip.substring(0, 7) === "::ffff:") {
     ip = ip.substring(7);
   }
   let geo;
   if (typeof ip === "string") {
-    geo = geoip.lookup(ip);
+    const foundUser = await repoMachine.User.findOneBy({ ip });
+    if (!foundUser) {
+      geo = geoip.lookup(ip);
+      if (geo) {
+        const { country, city } = geo;
+        const newUser = repoMachine.User.create({ ip, city, country });
+        try {
+          await repoMachine.User.save(newUser);
+          return res.sendStatus(201);
+        } catch (error) {
+          console.log("Error saving user");
+          return res.sendStatus(400);
+        }
+      }
+      console.log("error looking up geoIp");
+      return res.sendStatus(400);
+    }
+    foundUser.visits = foundUser.visits++;
+    await repoMachine.User.save(foundUser);
+    res.sendStatus(200);
   }
   console.log(geo);
 
-  res.send("hola");
+  res.sendStatus(204);
 });
 
 app.post("/api/v1", async (req: Request<{}, {}, emailBody>, res) => {

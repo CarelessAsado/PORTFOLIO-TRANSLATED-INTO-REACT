@@ -7,4 +7,12 @@ export default class User {
 
   @Column(/* { default: false, nullable: true } */)
   ip: string;
+
+  @Column(/* { default: false, nullable: true } */)
+  country: string;
+
+  @Column(/* { default: false, nullable: true } */)
+  city: string;
+  @Column({ default: 1 })
+  visits: number;
 }
