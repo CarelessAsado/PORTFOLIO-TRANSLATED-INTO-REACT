@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.27.2",
     "i18next": "^21.6.6",
     "react": "^17.0.2",
     "react-circle-flags": "0.0.15",
