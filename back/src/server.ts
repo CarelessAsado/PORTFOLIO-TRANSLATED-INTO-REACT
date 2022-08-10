@@ -33,10 +33,15 @@ app.get("/", (req, res) => {
   res.send("hola");
 });
 app.get("/api/v1", (req, res) => {
-  console.log(req.ip);
-  const ip = req.ip;
-  var geo = geoip.lookup(ip);
-
+  let ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress || "";
+  console.log(ip);
+  if (typeof ip === "string" && ip.substring(0, 7) == "::ffff:") {
+    ip = ip.substring(7);
+  }
+  let geo;
+  if (typeof ip === "string") {
+    geo = geoip.lookup(ip);
+  }
   console.log(geo);
 
   res.send("hola");
