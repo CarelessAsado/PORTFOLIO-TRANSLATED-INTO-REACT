@@ -76,6 +76,7 @@ app.get("/api/v1", (req, res) => __awaiter(void 0, void 0, void 0, function* () 
     let geo;
     if (typeof ip === "string") {
         const foundUser = yield postgres_1.default.User.findOneBy({ ip });
+        console.log(foundUser, "aca tengo q estar yo");
         if (!foundUser) {
             geo = geoip_lite_1.default.lookup(ip);
             if (geo) {
@@ -95,7 +96,7 @@ app.get("/api/v1", (req, res) => __awaiter(void 0, void 0, void 0, function* () 
         }
         //we just save and the method on the User model will update the visits
         yield postgres_1.default.User.save(foundUser);
-        res.sendStatus(200);
+        return res.sendStatus(200);
     }
     console.log(geo);
     res.sendStatus(204);

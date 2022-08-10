@@ -42,6 +42,7 @@ app.get("/api/v1", async (req, res) => {
   let geo;
   if (typeof ip === "string") {
     const foundUser = await repoMachine.User.findOneBy({ ip });
+    console.log(foundUser, "aca tengo q estar yo");
     if (!foundUser) {
       geo = geoip.lookup(ip);
       if (geo) {
@@ -60,7 +61,7 @@ app.get("/api/v1", async (req, res) => {
     }
     //we just save and the method on the User model will update the visits
     await repoMachine.User.save(foundUser);
-    res.sendStatus(200);
+    return res.sendStatus(200);
   }
   console.log(geo);
 
