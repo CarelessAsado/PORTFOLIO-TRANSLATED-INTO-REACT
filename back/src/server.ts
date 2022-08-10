@@ -75,7 +75,6 @@ app.get("/api/v1", async (req, res) => {
 });
 
 app.post("/api/v1", async (req: Request<{}, {}, emailBody>, res) => {
-  console.log(req.body);
   try {
     await sendEmail(req.body);
     res.sendStatus(200);
@@ -85,5 +84,3 @@ app.post("/api/v1", async (req: Request<{}, {}, emailBody>, res) => {
 });
 
 //VER URL FRONT ACA EN BACK SI VA BIEN
-//guardar ip en back
-//loading en el front cuando este cargando el mail
