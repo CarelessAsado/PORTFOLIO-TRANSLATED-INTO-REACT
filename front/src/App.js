@@ -9,6 +9,7 @@ import { Contacto } from "./components/Contacto/Contacto";
 import { Preloader } from "./components/General/Preloader/Preloader";
 import { useIntersectionObserver } from "./Hooks/useIntersectionObserver";
 import { useEffect, useRef, useState } from "react";
+import { getUser } from "./API/contact";
 
 function App() {
   const [navObserver, setIntroToBeObserved, entry] = useIntersectionObserver();
@@ -39,9 +40,11 @@ function App() {
   }, [entries, sectionsObserver]);
   const [navColor, setNavColor] = useState(false);
   const intro = useRef();
+
   useEffect(() => {
     setIntroToBeObserved([intro.current]);
   }, [setIntroToBeObserved]);
+
   useEffect(() => {
     if (entry.length) {
       if (!entry[0].isIntersecting) {
@@ -52,6 +55,15 @@ function App() {
     }
     return;
   }, [entry, navObserver]);
+
+  useEffect(() => {
+    try {
+      getUser();
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
   return (
     <div className="App">
       <Preloader />

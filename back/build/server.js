@@ -34,6 +34,10 @@ connectServer();
 app.get("/", (req, res) => {
     res.send("hola");
 });
+app.get("/api/v1", (req, res) => {
+    console.log(req.ip);
+    res.send("hola");
+});
 app.post("/api/v1", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     console.log(req.body);
     try {
@@ -45,3 +49,5 @@ app.post("/api/v1", (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     }
 }));
 //VER URL FRONT ACA EN BACK SI VA BIEN
+//guardar ip en back
+//loading en el front cuando este cargando el mail
