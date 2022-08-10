@@ -32,7 +32,6 @@ export default class User {
 
   @BeforeInsert()
   updateVisits() {
-    console.log(this.visits, "ver q pasa");
     if (!this.visits) {
       this.visits = 1;
       return;
