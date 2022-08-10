@@ -60,7 +60,7 @@ app.get("/api/v1", async (req, res) => {
       console.log("error looking up geoIp");
       return res.sendStatus(400);
     }
-    //we just save and the method on the User model will update the visits
+
     try {
       foundUser.visits++;
       await repoMachine.User.save(foundUser);
