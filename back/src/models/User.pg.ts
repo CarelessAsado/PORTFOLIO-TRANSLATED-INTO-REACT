@@ -31,10 +31,10 @@ export default class User {
   @CreateDateColumn()
   createdAt: Date;
 
-  @BeforeUpdate()
+  /*   @BeforeUpdate()
   updateVisits() {
     console.log("UPDATE");
     this.visits = this.visits++;
     return;
-  }
+  }*/
 }
