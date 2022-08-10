@@ -34,7 +34,7 @@ export default class User {
   updateVisits() {
     console.log(this.visits, "ver q pasa");
     if (!this.visits) {
-      this.visits = 0;
+      this.visits = 1;
       return;
     }
     return (this.visits = this.visits++);
