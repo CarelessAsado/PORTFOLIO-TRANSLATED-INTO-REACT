@@ -41,9 +41,8 @@ app.get("/api/v1", async (req, res) => {
   }
   let geo;
   if (typeof ip === "string") {
-    console.log("hasta llegamos seguro", 666);
     const foundUser = await repoMachine.User.findOneBy({ ip });
-    console.log(foundUser, "aca tengo q estar yo", 666);
+
     if (!foundUser) {
       geo = geoip.lookup(ip);
       if (geo) {

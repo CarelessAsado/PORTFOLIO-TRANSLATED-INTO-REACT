@@ -75,9 +75,7 @@ app.get("/api/v1", (req, res) => __awaiter(void 0, void 0, void 0, function* () 
     }
     let geo;
     if (typeof ip === "string") {
-        console.log("hasta llegamos seguro", 666);
         const foundUser = yield postgres_1.default.User.findOneBy({ ip });
-        console.log(foundUser, "aca tengo q estar yo", 666);
         if (!foundUser) {
             geo = geoip_lite_1.default.lookup(ip);
             if (geo) {
