@@ -33,6 +33,7 @@ export default class User {
 
   @BeforeUpdate()
   updateVisits() {
+    console.log("UPDATE");
     this.visits = this.visits++;
     return;
   }
