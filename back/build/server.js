@@ -69,7 +69,6 @@ app.get("/", (req, res) => {
 app.get("/api/v1", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     let ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress || "";
     console.log("'IP: '", ip);
-    console.log(req.headers);
     if (typeof ip === "string" && ip.substring(0, 7) === "::ffff:") {
         ip = ip.substring(7);
     }
@@ -80,6 +79,7 @@ app.get("/api/v1", (req, res) => __awaiter(void 0, void 0, void 0, function* () 
             geo = geoip_lite_1.default.lookup(ip);
             if (geo) {
                 const { country, city } = geo;
+                console.log(geo);
                 const newUser = postgres_1.default.User.create({ ip, city, country });
                 try {
                     yield postgres_1.default.User.save(newUser);
@@ -90,18 +90,22 @@ app.get("/api/v1", (req, res) => __awaiter(void 0, void 0, void 0, function* () 
                     return res.sendStatus(400);
                 }
             }
-            console.log("error looking up geoIp");
+            console.log("geoIp is null");
+            return res.sendStatus(204);
+        }
+        try {
+            foundUser.visits++;
+            yield postgres_1.default.User.save(foundUser);
+            return res.sendStatus(200);
+        }
+        catch (error) {
+            console.log("Error updating user");
             return res.sendStatus(400);
         }
-        //we just save and the method on the User model will update the visits
-        yield postgres_1.default.User.save(foundUser);
-        return res.sendStatus(200);
     }
-    console.log(geo);
     res.sendStatus(204);
 }));
 app.post("/api/v1", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log(req.body);
     try {
         yield (0, nodemailer_1.default)(req.body);
         res.sendStatus(200);
@@ -111,5 +115,3 @@ app.post("/api/v1", (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     }
 }));
 //VER URL FRONT ACA EN BACK SI VA BIEN
-//guardar ip en back
-//loading en el front cuando este cargando el mail

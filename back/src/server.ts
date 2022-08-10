@@ -57,8 +57,8 @@ app.get("/api/v1", async (req, res) => {
           return res.sendStatus(400);
         }
       }
-      console.log("error looking up geoIp");
-      return res.sendStatus(400);
+      console.log("geoIp is null");
+      return res.sendStatus(204);
     }
 
     try {

@@ -6,6 +6,7 @@ import { sendData } from "../../API/contact";
 
 export const Contacto = () => {
   const { t } = useTranslation();
+  const [loading, setLoading] = useState(false);
   const [contactame, setContactame] = useState({
     name: "",
     email: "",
@@ -17,11 +18,13 @@ export const Contacto = () => {
   }
   async function handleYourBusiness(e) {
     e.preventDefault();
+    setLoading(true);
     try {
-      const { data } = await sendData(contactame);
-      console.log(data);
+      await sendData(contactame);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   }
   return (
@@ -59,7 +62,6 @@ export const Contacto = () => {
                 placeholder="Nombre *"
                 name="name"
                 onChange={handleChange}
-                required
               />
               <label htmlFor="name">{t("name")}</label>
             </div>
@@ -102,9 +104,21 @@ export const Contacto = () => {
                 {t("message")}
               </label>
             </div>
+            {/*---------------- SUBMIT BUTTON ---------*/}
             <div className="inputControl span2">
               <label htmlFor="botonEnviarForm"></label>
-              <input type="submit" id="botonEnviarForm" value={t("send")} />
+
+              <button className="botonEnviarForm">
+                {loading ? (
+                  <>
+                    <span className="loader"></span>
+                    <span className="loader"></span>
+                    <span className="loader"></span>
+                  </>
+                ) : (
+                  t("send")
+                )}
+              </button>
             </div>
           </form>
         </div>
