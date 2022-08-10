@@ -62,8 +62,7 @@ app.get("/api/v1", async (req, res) => {
     }
     //we just save and the method on the User model will update the visits
     try {
-      foundUser.visits++;
-      console.log(foundUser.visits, "ver q haya 1 mas");
+      /* foundUser.visits++; */
       await repoMachine.User.save(foundUser);
       return res.sendStatus(200);
     } catch (error) {
