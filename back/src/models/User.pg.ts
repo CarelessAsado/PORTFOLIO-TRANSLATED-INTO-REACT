@@ -4,8 +4,6 @@ import {
   Column,
   UpdateDateColumn,
   CreateDateColumn,
-  BeforeInsert,
-  BeforeUpdate,
 } from "typeorm";
 
 @Entity()
@@ -30,17 +28,4 @@ export default class User {
 
   @CreateDateColumn()
   createdAt: Date;
-
-  @BeforeUpdate()
-  updateVisits() {
-    console.log("UPDATE");
-    this.visits++;
-    return;
-  }
-
-  @BeforeInsert()
-  log() {
-    console.log("INSERT");
-    return;
-  }
 }
