@@ -5,6 +5,7 @@ import {
   UpdateDateColumn,
   CreateDateColumn,
   BeforeInsert,
+  BeforeUpdate,
 } from "typeorm";
 
 @Entity()
@@ -21,7 +22,7 @@ export default class User {
   @Column()
   city: string;
 
-  @Column()
+  @Column({ default: 1 })
   visits: number;
 
   @UpdateDateColumn()
@@ -30,12 +31,9 @@ export default class User {
   @CreateDateColumn()
   createdAt: Date;
 
-  @BeforeInsert()
+  @BeforeUpdate()
   updateVisits() {
-    if (!this.visits) {
-      this.visits = 1;
-      return;
-    }
-    return (this.visits = this.visits++);
+    this.visits = this.visits++;
+    return;
   }
 }
