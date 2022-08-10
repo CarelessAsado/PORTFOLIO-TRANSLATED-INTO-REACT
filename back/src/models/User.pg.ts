@@ -15,10 +15,10 @@ export default class User {
   @Column(/* { default: false, nullable: true } */)
   ip: string;
 
-  @Column(/* { default: false, nullable: true } */)
+  @Column()
   country: string;
 
-  @Column(/* { default: false, nullable: true } */)
+  @Column()
   city: string;
 
   @Column()
