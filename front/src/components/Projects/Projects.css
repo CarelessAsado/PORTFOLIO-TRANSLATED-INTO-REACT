@@ -94,12 +94,16 @@
   display: flex;
   border: 1px solid white;
   color: white;
+  background-color: transparent;
   transition: 0.3s;
   justify-content: space-between;
   align-items: center;
   border-radius: 3px;
   padding: 5px 3px;
   font-size: 13px;
+}
+.btnSvg:disabled {
+  cursor: not-allowed;
 }
 svg {
   height: 30px;
@@ -122,6 +126,7 @@ svg {
 .tecnologiasProject h4 {
   padding: 10px;
   color: #18a096;
+  font-size: 1rem;
 }
 .tecnologiasProject h4:hover {
   color: #17ebdde3;
@@ -190,6 +195,7 @@ svg {
     display: flex;
     justify-content: space-between;
     color: #abb0b4;
+    font-size: 0.8rem;
   }
   .additionalInfo:hover + #restOfTheInfo,
   #restOfTheInfo:hover {
@@ -228,11 +234,10 @@ svg {
   }
   #restOfTheInfo {
     gap: 0px;
-  }
-  #restOfTheInfo {
     bottom: 0;
     top: 0;
     justify-content: space-around;
+    font-size: 0.82rem;
   }
 }
 @media screen and (max-width: 490px) {
@@ -274,7 +279,6 @@ svg {
 }
 @media screen and (max-width: 400px) {
   #restOfTheInfo {
-    font-size: var(--fontAgustinRocha);
     padding: 5px 2px 10px;
     justify-content: space-around;
   }

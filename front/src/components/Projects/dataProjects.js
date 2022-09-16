@@ -1,6 +1,21 @@
 export const dataProjects = [
   {
     descripcion: "",
+    img: "/img/perf-mundial.png",
+    alt: "",
+    tecnologias: [
+      "React",
+      "Mongo",
+      "Mercado Pago API",
+      "Node",
+      "Styled-components",
+    ],
+    titulo: "",
+    github: "",
+    web: "https://elastic-mayer-cd6095.netlify.app/",
+  },
+  {
+    descripcion: "",
     img: "/img/typescript-react.png",
     alt: "",
     tecnologias: ["React", "Typescript", "JWT", "Node", "Styled-components"],
@@ -12,7 +27,7 @@ export const dataProjects = [
     descripcion: "",
     img: "/img/Portfolio.png",
     alt: "",
-    tecnologias: ["React", "Intersection Observer", "i18n"],
+    tecnologias: ["React", "Intersection Observer", "i18n", "PostgreSQL"],
     titulo: "",
     github: "https://github.com/CarelessAsado/PORTFOLIO-TRANSLATED-INTO-REACT",
     web: "https://www.rodrigohernanlopez.com.ar/",
@@ -34,7 +49,7 @@ export const dataProjects = [
     tecnologias: ["Nodejs", "Express-sessions", "MongoDb", "Mongoose"],
     titulo: "RODRIBOOK WEBSITE",
     github: "https://github.com/CarelessAsado/rodribook",
-    web: "https://rodribook.herokuapp.com/",
+    web: "",
   },
   {
     descripcion:

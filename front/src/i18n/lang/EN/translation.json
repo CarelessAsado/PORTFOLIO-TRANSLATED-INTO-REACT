@@ -23,6 +23,13 @@
   "pdf": "Eng",
   "dataprojects": [
     {
+      "descripcion": "Fragrance e-shop developed for a client. Admin dashboard to upload and edit products. Checkout and payment flow (Mercado Pago). JWT authentication, Redux state management and Mongodb index search.",
+
+      "alt": "REACT/NODE E-COMMERCE",
+
+      "titulo": "FRAGRANCE E-COMMERCE"
+    },
+    {
       "descripcion": "A React app that consumes a Node.js API. User authentication is carried out with JsonWebToken. Mongodb/Mongoose was used for the database and Styled-components for the styling. Both back end and front end were coded in Typescript.",
 
       "alt": "TYPESCRIPT/REACT/NODE APP",
@@ -64,5 +71,6 @@
 
       "titulo": "ROHELAW WEBSITE"
     }
-  ]
+  ],
+  "unavailable": "UNAVAILABLE"
 }

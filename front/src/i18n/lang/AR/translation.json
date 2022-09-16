@@ -23,6 +23,13 @@
   "pdf": "Esp",
   "dataprojects": [
     {
+      "descripcion": "E-commerce de perfumes desarrollado para un cliente. Tiene una sección de admin para cargar y editar productos. Checkout y pasarela de pago (Mercado Pago). Incluye Redux, JWT y Mongodb.",
+
+      "alt": "REACT/NODE E-COMMERCE",
+
+      "titulo": "Perfumería E-shop"
+    },
+    {
       "descripcion": "App en React que consume una API de Node y una base de datos de MongoDb. La autenticación de usuario se realiza con JWT. Utilicé Styled-components para los estilos. Tanto el front como el back fueron escritos en Typescript.",
 
       "alt": "TYPESCRIPT/REACT/NODE APP",
@@ -64,5 +71,6 @@
 
       "titulo": "ROHELAW WEBSITE"
     }
-  ]
+  ],
+  "unavailable": "NO DISPONIBLE"
 }
