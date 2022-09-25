@@ -32,7 +32,7 @@ export const About = () => {
           </p>
         </div>
         <div className="aboutGridDcha">
-          <img src="/img/me1.png" alt="imagen chico guapo" />
+          <img src="/img/rod2.png" alt="imagen chico guapo" />
         </div>
       </div>
     </section>
