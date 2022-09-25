@@ -12,7 +12,7 @@ export const dataProjects = [
     ],
     titulo: "",
     github: "",
-    web: "https://elastic-mayer-cd6095.netlify.app/",
+    web: "https://www.perfumeriamundial.ar/",
   },
   {
     descripcion: "",
