@@ -30,7 +30,7 @@
       "titulo": "FRAGRANCE E-COMMERCE"
     },
     {
-      "descripcion": "A React app that consumes a Node.js API. User authentication is carried out with JsonWebToken. Mongodb/Mongoose was used for the database and Styled-components for the styling. Both back end and front end were coded in Typescript.",
+      "descripcion": "A React app that consumes a Node.js API. User authentication is implemented with JsonWebToken and state management uses Redux Thunk. Mongodb/Mongoose was used for the database and Styled-components for the styling. Both back end and front end were coded in Typescript.",
 
       "alt": "TYPESCRIPT/REACT/NODE APP",
 

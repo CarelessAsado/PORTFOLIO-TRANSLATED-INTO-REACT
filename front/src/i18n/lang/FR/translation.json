@@ -30,7 +30,7 @@
       "titulo": "Parfumerie en ligne"
     },
     {
-      "descripcion": "App de Typescript/React qui se communique avec une API Typescript/Node.js et une une base de données Mongodb. J'ai utilisé Styled-components pour les styles.",
+      "descripcion": "App de Typescript/React qui se communique avec une API Typescript/Node.js et une une base de données Mongodb. J'ai utilisé Styled-components pour les styles et Redux-Thunk pour la gestion de l'état.",
 
       "alt": "TYPESCRIPT/REACT/NODE APP",
 

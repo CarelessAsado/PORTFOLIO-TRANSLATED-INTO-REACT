@@ -30,8 +30,7 @@
       "titulo": "Perfumería E-shop"
     },
     {
-      "descripcion": "App en React que consume una API de Node y una base de datos de MongoDb. La autenticación de usuario se realiza con JWT. Utilicé Styled-components para los estilos. Tanto el front como el back fueron escritos en Typescript.",
-
+      "descripcion": "App en React que consume una API de Node y una base de datos de MongoDb. La autenticación de usuario se realiza con JWT y la gestión del estado con Redux-Thunk. Utilicé Styled-components para los estilos. Tanto el front como el back fueron escritos en Typescript.",
       "alt": "TYPESCRIPT/REACT/NODE APP",
 
       "titulo": "Typescript/React app"
