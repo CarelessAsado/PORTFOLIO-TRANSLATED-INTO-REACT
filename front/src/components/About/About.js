@@ -26,7 +26,8 @@ export const About = () => {
           </p>
           <p>{t("about3")}</p>
           <p>
-            <a className="blue" href={`./cv/CV ${t("pdf")} 2022.pdf`} download>
+            {/* update Spanish and French cv later ${t("pdf")} */}
+            <a className="blue" href={`./cv/CV Eng 2022.pdf`} download>
               {t("aboutEnd")}
             </a>
           </p>
