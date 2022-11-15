@@ -29,13 +29,15 @@
 
       "titulo": "Parfumerie en ligne"
     },
+
     {
-      "descripcion": "App de Typescript/React qui se communique avec une API Typescript/Node.js et une une base de données Mongodb. J'ai utilisé Styled-components pour les styles et Redux-Thunk pour la gestion de l'état.",
+      "descripcion": "Imitation du populaire site web avec notifications en temps réel (socket.io). Après inscription, les utilisateurs ont accès à un espace public où ils peuvent publier des messages. En outre, il y a une route privée où les utilisateurs peuvent consulter et modifier leurs données personnelles.",
 
-      "alt": "TYPESCRIPT/REACT/NODE APP",
+      "alt": "Projet Rodribook",
 
-      "titulo": "Typescript/React app"
+      "titulo": "RODRIBOOK WEBSITE"
     },
+
     {
       "descripcion": "Portfolio que j'ai construit d'abord avec Javascript pur et que j'ai ensuite traduit en React. J'ai utilisé l'API Intersection Observer, et j'ai ajouté les traductions avec l'aide de React-i18n.",
 
@@ -43,29 +45,9 @@
 
       "titulo": "Javascript à React"
     },
+
     {
-      "descripcion": "Gestionnaire des tâches que j'ai construit avec React et qui utilise JWT pour l'authentification. Ce système se communique avec une API Node.js et une base de données Mongo Atlas.",
-
-      "alt": "Projet MERN",
-
-      "titulo": "PROJET MERN"
-    },
-    {
-      "descripcion": "Imitation du populaire site web. Après inscription et connexion, les utilisateurs ont accès à un espace public où ils peuvent publier des messages. En outre, il y a une route privée où les utilisateurs peuvent consulter et modifier leurs données personnelles.",
-
-      "alt": "Projet Rodribook",
-
-      "titulo": "RODRIBOOK WEBSITE"
-    },
-    {
-      "descripcion": "Jeu de Blackjack que j'ai construit inspiré par un projet de Free Code Camp, dont j'ai modifié et ajouté plusieurs fonctionnalités: notifications sur l'état du jeu, un bot croupier, une interface pour parier, etc.",
-
-      "alt": "Projet Blackjack",
-
-      "titulo": "JEU DE BLACKJACK"
-    },
-    {
-      "descripcion": "Mon premier site web.",
+      "descripcion": "Services professionnels juridiques.",
 
       "alt": "Projet Rohelaw",
 

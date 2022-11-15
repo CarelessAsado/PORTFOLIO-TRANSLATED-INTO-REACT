@@ -29,13 +29,15 @@
 
       "titulo": "FRAGRANCE E-COMMERCE"
     },
+
     {
-      "descripcion": "A React app that consumes a Node.js API. User authentication is implemented with JsonWebToken and state management uses Redux Thunk. Mongodb/Mongoose was used for the database and Styled-components for the styling. Both back end and front end were coded in Typescript.",
+      "descripcion": "Replica of the famous site with real-time socket notifications. Upon registration, users have access to a public area where they can post messages, and an additional private route where they can view and edit their user info.",
 
-      "alt": "TYPESCRIPT/REACT/NODE APP",
+      "alt": "Rodribook project",
 
-      "titulo": "Typescript/React app"
+      "titulo": "RODRIBOOK WEBSITE"
     },
+
     {
       "descripcion": "Portfolio that I originally built with pure Javascript and that I later translated into React. I used the Intersection Observer API, and translated the content with the help of React-i18n.",
 
@@ -43,29 +45,9 @@
 
       "titulo": "From Javascript to React"
     },
+
     {
-      "descripcion": "Task management system I built with React and JWT authentification. It communicates with a Node.js API and a Mongo Atlas database.",
-
-      "alt": "MERN project",
-
-      "titulo": "MERN PROJECT"
-    },
-    {
-      "descripcion": "Replica of the famous site. Following registration and log in, users have access to a public area where they can post messages, and an additional private route where they can view and edit their user info.",
-
-      "alt": "Rodribook project",
-
-      "titulo": "RODRIBOOK WEBSITE"
-    },
-    {
-      "descripcion": "Blackjack game I built based on a Free Code Camp project, to which I later added upgrades: notifications on the state of the game, a dealer bot, user interface to place bets, etc.",
-
-      "alt": "Blackjack project",
-
-      "titulo": "BLACKJACK GAME"
-    },
-    {
-      "descripcion": "My first website.",
+      "descripcion": "Legal professional services.",
 
       "alt": "Rohelaw project",
 

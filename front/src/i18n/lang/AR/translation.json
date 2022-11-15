@@ -30,11 +30,13 @@
       "titulo": "Perfumería E-shop"
     },
     {
-      "descripcion": "App en React que consume una API de Node y una base de datos de MongoDb. La autenticación de usuario se realiza con JWT y la gestión del estado con Redux-Thunk. Utilicé Styled-components para los estilos. Tanto el front como el back fueron escritos en Typescript.",
-      "alt": "TYPESCRIPT/REACT/NODE APP",
+      "descripcion": "Recreación del famoso sitio con notificaciones en tiempo real (sockets). Tras registrarse, los usuarios pueden acceder a un muro público para escribir mensajes, así como acceder de manera privada a su información de usuario y editarla.",
 
-      "titulo": "Typescript/React app"
+      "alt": "proyecto Rodribook",
+
+      "titulo": "RODRIBOOK WEBSITE"
     },
+
     {
       "descripcion": "Portfolio que construí originalmente con Javascript puro y que luego traduje a React.Trabajé con el Intersection Observer a través de un hook personalizado, y utilicé React-i18next para la traducción del contenido.",
 
@@ -42,29 +44,9 @@
 
       "titulo": "De Javascript a React"
     },
+
     {
-      "descripcion": "Gestor de tareas realizado en React con autenticación JWT, que se comunica con una API en Nodejs y una base de datos en Mongo Atlas.",
-
-      "alt": "proyecto MERN",
-
-      "titulo": "PROYECTO MERN"
-    },
-    {
-      "descripcion": "Recreación del famoso sitio. Previo registro e inicio de sesión, los usuarios pueden acceder a un muro público para escribir mensajes, así como acceder de manera privada a su información de usuario y editarla.",
-
-      "alt": "proyecto Rodribook",
-
-      "titulo": "RODRIBOOK WEBSITE"
-    },
-    {
-      "descripcion": "Juego de blackjack que tomé como base del sitio Free Code Camp, y que luego fui adaptando: notificaciones sobre el estado de la partida, un bot dealer, interfaz para realizar apuestas, etc.",
-
-      "alt": "proyecto Blackjack",
-
-      "titulo": "BLACKJACK GAME"
-    },
-    {
-      "descripcion": "Mi primer sitio web.",
+      "descripcion": "Servicios profesionales jurídicos.",
 
       "alt": "proyecto Rohelaw",
 
