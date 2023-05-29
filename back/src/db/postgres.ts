@@ -15,6 +15,7 @@ Object.assign(
   process.env.NODE_ENV
     ? {
         //HEROKU CREATES THIS ENV AUTOMATICALLY. No need to set it yourself
+        //with render I have to set a specific env variable
         url: process.env.DATABASE_URL,
         ssl: {
           rejectUnauthorized: false,
