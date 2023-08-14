@@ -1,5 +1,7 @@
 ## Installation
 
+In both FE and BE folders:
+
 ```bash
 $ npm install
 ```
@@ -12,4 +14,4 @@ Copy this file (both FE and BE folders) and rename it to `.env` and change the p
 
 ## GeoIp-Lite
 
-Remember to run geoIp lite cmd on localhost: https://www.npmjs.com/package/geoip-lite
+Remember to run geoIp lite cmd on BE folder, on localhost: https://www.npmjs.com/package/geoip-lite
