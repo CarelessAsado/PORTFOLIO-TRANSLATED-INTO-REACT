@@ -14,7 +14,6 @@ import React from "react";
 import { SECTIONS } from "utils/constants";
 
 //TODO: forwardref??
-//TODO: type section ids
 //TODO: check api error on console on client side
 //TODO: type translations
 
