@@ -1,4 +1,4 @@
-const OLD_HEROKU_URL = "https://portfoliobackendrodrigo.herokuapp.com";
+const OLD_HEROKU_URL = "https://portfoliobackendrodrigo.herokuapp.com"; // eslint-disable-line @typescript-eslint/no-unused-vars
 
 const RENDER_URL = "https://portfoliobackend.onrender.com";
 
