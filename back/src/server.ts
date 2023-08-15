@@ -6,13 +6,17 @@ import cors from "cors";
 import sendEmail from "./nodemailer";
 import repoMachine, { connectPostgres } from "./db/postgres";
 import geoip from "geoip-lite";
-
-/* import { FRONTEND_URL } from "./constants"; */
+import { FRONTEND_URL } from "./constants";
 
 /*---------------------------------*/
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(cors());
+app.use(
+  cors({
+    origin: FRONTEND_URL,
+    credentials: true,
+  })
+);
 
 /*----------------------------------- */
 const PORT = process.env.PORT || 5000;
@@ -34,7 +38,7 @@ app.get("/", (req, res) => {
 });
 app.get("/api/v1", async (req, res) => {
   let ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress || "";
-  console.log("'IP: '", ip, 77);
+  console.log("'IP: '", ip);
 
   if (typeof ip === "string" && ip.substring(0, 7) === "::ffff:") {
     ip = ip.substring(7);
