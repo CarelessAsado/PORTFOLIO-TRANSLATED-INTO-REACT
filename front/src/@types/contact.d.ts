@@ -4,5 +4,3 @@ interface emailContactInfo {
   asunto: string;
   mensaje: string;
 }
-
-type SectionsStr = "intro" | "contacto" | "sobremi" | "proyectos";
