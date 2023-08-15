@@ -1,6 +1,11 @@
 import React from "react";
 import { CircleFlag } from "react-circle-flags";
-export const Flags = ({ code, changeLanguage }) => {
+
+interface FlagsProps {
+  code: string;
+  changeLanguage: (code: string) => void;
+}
+export const Flags = ({ code, changeLanguage }: FlagsProps) => {
   return (
     <CircleFlag
       countryCode={code}

@@ -1,12 +1,13 @@
 import React from "react";
 import "./LogoWhatsapp.css";
-import datos from "../../Contacto/Datos";
+import PERSONAL_DATA from "utils/constants";
 import { useTranslation } from "react-i18next";
-export const LogoWhatsapp = ({ whatsAppLogo }) => {
+
+export const LogoWhatsapp = ({ whatsAppLogo }: { whatsAppLogo: boolean }) => {
   const { t } = useTranslation();
   return (
     <a
-      href={`https://wa.me/${datos.cel}?text=${t("hello")} Rodrigo`}
+      href={`https://wa.me/${PERSONAL_DATA.cel}?text=${t("hello")} Rodrigo`}
       target="_blank"
       rel="noreferrer"
     >

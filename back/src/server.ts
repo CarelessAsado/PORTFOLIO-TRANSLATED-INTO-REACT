@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 });
 app.get("/api/v1", async (req, res) => {
   let ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress || "";
-  console.log("'IP: '", ip);
+  console.log("'IP: '", ip, 77);
 
   if (typeof ip === "string" && ip.substring(0, 7) === "::ffff:") {
     ip = ip.substring(7);

@@ -1,10 +1,11 @@
 import React from "react";
 import "./Tecnologias.css";
 import { useTranslation } from "react-i18next";
+import { SECTIONS } from "utils/constants";
 export const Tecnologias = () => {
   const { t } = useTranslation();
   return (
-    <section id="skills">
+    <section id={SECTIONS.SKILLS}>
       <header className="skillsHeader">
         <h2>{t("skills")}</h2>
         <span className="tituloFantasma">{t("skills")}</span>

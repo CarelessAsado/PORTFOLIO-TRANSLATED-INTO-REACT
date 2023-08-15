@@ -3,10 +3,11 @@ import { Project } from "./Project";
 import "./Projects.css";
 import { dataProjects } from "./dataProjects";
 import { useTranslation } from "react-i18next";
+import { SECTIONS } from "utils/constants";
 export const Projects = () => {
   const { t, i18n } = useTranslation();
   return (
-    <section id="proyectos">
+    <section id={SECTIONS.PROJECTS}>
       <header className="proyectosHeader">
         <h2>{t("projects")}</h2>
         <span className="tituloFantasma">{t("projects")}</span>

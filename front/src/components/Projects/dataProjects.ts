@@ -1,19 +1,22 @@
-export const dataProjects = [
-  {
-    descripcion: "",
-    img: "/img/perf-mundial.png",
-    alt: "",
-    tecnologias: [
-      "React",
-      "Mongo",
-      "Mercado Pago API",
-      "Node",
-      "Styled-components",
-    ],
-    titulo: "",
-    github: "",
-    web: "https://www.perfumeriamundial.ar/",
-  },
+import PERSONAL_DATA from "utils/constants";
+
+export const FIRST_PROJECT = {
+  descripcion: "",
+  img: "/img/perf-mundial.png",
+  alt: "",
+  tecnologias: [
+    "React",
+    "Mongo",
+    "Mercado Pago API",
+    "Node",
+    "Styled-components",
+  ],
+  titulo: "",
+  github: "",
+  web: "https://www.perfumeriamundial.ar/",
+};
+export const dataProjects: (typeof FIRST_PROJECT)[] = [
+  FIRST_PROJECT,
 
   {
     descripcion: "",
@@ -38,7 +41,7 @@ export const dataProjects = [
     tecnologias: ["React", "Intersection Observer", "i18n", "PostgreSQL"],
     titulo: "",
     github: "https://github.com/CarelessAsado/PORTFOLIO-TRANSLATED-INTO-REACT",
-    web: "https://www.rodrigohernanlopez.com.ar/",
+    web: PERSONAL_DATA.web,
   },
 
   {

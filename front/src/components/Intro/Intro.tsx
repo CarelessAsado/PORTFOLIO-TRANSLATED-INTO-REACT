@@ -1,10 +1,12 @@
-import React from "react";
+import React, { RefObject } from "react";
 import "./Intro.css";
 import { useTranslation } from "react-i18next";
-export const Intro = ({ intro }) => {
+import { SECTIONS } from "utils/constants";
+
+export const Intro = ({ intro }: { intro: RefObject<HTMLElement> }) => {
   const { t } = useTranslation();
   return (
-    <section id="intro" ref={intro}>
+    <section id={SECTIONS.INTRO} ref={intro}>
       <video
         className="videoIntro"
         src="/vid/codingblurry.mp4"
@@ -19,7 +21,7 @@ export const Intro = ({ intro }) => {
         </h1>
         <h2>{t("introsub")}</h2>
         <p>
-          <a href="#proyectos">{t("introsub2")}&gt;</a>
+          <a href={`#${SECTIONS.PROJECTS}`}>{t("introsub2")}&gt;</a>
         </p>
       </div>
     </section>

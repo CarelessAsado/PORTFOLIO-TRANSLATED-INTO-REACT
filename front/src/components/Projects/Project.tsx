@@ -1,5 +1,8 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
-export const Project = ({ project }) => {
+import { FIRST_PROJECT } from "./dataProjects";
+
+export const Project = ({ project }: { project: typeof FIRST_PROJECT }) => {
   const { t } = useTranslation();
   const { alt, img, descripcion, github, web, titulo, tecnologias } = project;
   return (

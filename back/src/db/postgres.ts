@@ -22,10 +22,15 @@ Object.assign(
         },
       }
     : {
-        host: "localhost",
-        port: 5432,
-        username: process.env.POSTGRES_USERNAME,
-        password: process.env.POSTGRES_PWD,
+        url: process.env.DATABASE_URL,
+        ssl: {
+          rejectUnauthorized: false,
+        },
+        //I had to comment this since I dont have local PG currently
+        // host: "localhost",
+        // port: 5432,
+        // username: process.env.POSTGRES_USERNAME,
+        // password: process.env.POSTGRES_PWD,
       }
 );
 const PGDataSource = new DataSource(baseParams);

@@ -1,12 +1,13 @@
 import React from "react";
 import "./About.css";
 import { useTranslation } from "react-i18next";
+import { SECTIONS } from "utils/constants";
 
 export const About = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="about">
+    <section id={SECTIONS.ABOUT_ME}>
       <header className="aboutHeader">
         <p>
           <em> "{t("greeting")}"</em>
@@ -27,7 +28,7 @@ export const About = () => {
           <p>{t("about3")}</p>
           <p>
             {/* update Spanish and French cv later ${t("pdf")} */}
-            <a className="blue" href={`./cv/CV Eng 2022.pdf`} download>
+            <a className="blue" href={`./cv/CV Eng 2023.pdf`} download>
               {t("aboutEnd")}
             </a>
           </p>
