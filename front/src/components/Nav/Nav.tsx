@@ -1,14 +1,26 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./Nav.css";
+import { Flags } from "components/Flags/Flags";
 import { HashLink } from "react-router-hash-link";
 
 import { useTranslation } from "react-i18next";
-import { Flags } from "../Flags/Flags";
-export const Nav = ({ navColor, sectionIntersected }) => {
+import { SECTIONS } from "utils/constants";
+
+export const Nav = ({
+  navColor,
+  sectionIntersected,
+}: {
+  navColor: boolean;
+  sectionIntersected: string;
+}) => {
   const [navOpen, setNavOpen] = useState(false);
   const languages = ["gb", "ar", "fr"];
   const { t, i18n } = useTranslation();
-  function changeLanguage(code) {
+  /** Changes localization language and closes nav menu (in responsive mode) if open
+   *
+   * @param code string for the language user wants to change
+   */
+  function changeLanguage(code: string) {
     i18n.changeLanguage(code);
     setNavOpen(false);
   }
@@ -44,10 +56,12 @@ export const Nav = ({ navColor, sectionIntersected }) => {
 
           <li>
             <HashLink
-              to="#proyectos"
+              to={`#${SECTIONS.PROJECTS}`}
               id="proyectosHover"
               className={
-                sectionIntersected === "proyectos" ? "lineHover" : undefined
+                sectionIntersected === SECTIONS.PROJECTS
+                  ? "lineHover"
+                  : undefined
               }
               onClick={() => setNavOpen(false)}
             >
@@ -56,10 +70,10 @@ export const Nav = ({ navColor, sectionIntersected }) => {
           </li>
           <li>
             <HashLink
-              to="#skills"
+              to={`#${SECTIONS.SKILLS}`}
               id="skillsHover"
               className={
-                sectionIntersected === "skills" ? "lineHover" : undefined
+                sectionIntersected === SECTIONS.SKILLS ? "lineHover" : undefined
               }
               onClick={() => setNavOpen(false)}
             >
@@ -68,10 +82,12 @@ export const Nav = ({ navColor, sectionIntersected }) => {
           </li>
           <li>
             <HashLink
-              to="#contacto"
+              to={`#${SECTIONS.CONTACTO}`}
               id="contactoHover"
               className={
-                sectionIntersected === "contacto" ? "lineHover" : undefined
+                sectionIntersected === SECTIONS.CONTACTO
+                  ? "lineHover"
+                  : undefined
               }
               onClick={() => setNavOpen(false)}
             >

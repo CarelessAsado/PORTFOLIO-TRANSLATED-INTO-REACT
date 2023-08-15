@@ -1,24 +1,31 @@
 import React, { useState } from "react";
 import "./Contacto.css";
-import contactData from "./Datos";
+import PERSONAL_DATA, { SECTIONS } from "utils/constants";
 import { useTranslation } from "react-i18next";
-import { sendData } from "../../API/contact";
+import { sendData } from "API/contact";
 import Success from "./auxiliaries/Success";
+
+const emailStr: keyof Pick<emailContactInfo, "email"> = "email";
+const asuntoStr: keyof Pick<emailContactInfo, "asunto"> = "asunto";
+const nameStr: keyof Pick<emailContactInfo, "name"> = "name";
+const msjeStr: keyof Pick<emailContactInfo, "mensaje"> = "mensaje";
 
 export const Contacto = () => {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
-  const [contactame, setContactame] = useState({
+  const [contactame, setContactame] = useState<emailContactInfo>({
     name: "",
     email: "",
     asunto: "",
     mensaje: "",
   });
   const [success, setSuccess] = useState(false);
-  function handleChange({ target }) {
+  function handleChange({
+    target,
+  }: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setContactame({ ...contactame, [target.name]: target.value });
   }
-  async function handleYourBusiness(e) {
+  async function handleYourBusiness(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
     try {
@@ -31,7 +38,7 @@ export const Contacto = () => {
     }
   }
   return (
-    <section id="contacto">
+    <section id={SECTIONS.CONTACTO}>
       <header className="contactoHeader">
         <h2>{t("contact")}</h2>
         <span className="tituloFantasma">{t("contact")}</span>
@@ -41,13 +48,13 @@ export const Contacto = () => {
         <div className="contactoGridIzq">
           <div className="emailInfoContacto">
             <i className="far fa-envelope"></i>
-            <span>{contactData.email}</span>
+            <span>{PERSONAL_DATA.email}</span>
           </div>
           <div className="celularInfoContacto">
             <i className="fab fa-whatsapp green-color" aria-hidden="true"></i>
             <span>
-              (+54 9) 11-{contactData.cel.slice(4, 8)}-
-              {contactData.cel.slice(8)}
+              (+54 9) 11-{PERSONAL_DATA.cel.slice(4, 8)}-
+              {PERSONAL_DATA.cel.slice(8)}
             </span>
           </div>
         </div>
@@ -63,50 +70,50 @@ export const Contacto = () => {
               <div className="input">
                 <input
                   type="text"
-                  id="name"
+                  id={nameStr}
                   className="inputPosta"
                   placeholder="Nombre *"
-                  name="name"
+                  name={nameStr}
                   onChange={handleChange}
                 />
-                <label htmlFor="name">{t("name")}</label>
+                <label htmlFor={nameStr}>{t(nameStr)}</label>
               </div>
               {/* -------------EMAIL--------------- */}
               <div className="input">
                 <input
                   type="email"
-                  id="email"
+                  id={emailStr}
                   className="inputPosta"
                   placeholder="Email *"
-                  name="email"
+                  name={emailStr}
                   onChange={handleChange}
                   required
                 />
-                <label htmlFor="email">Email</label>
+                <label htmlFor={emailStr}>Email</label>
               </div>
               <div className="input span2">
                 {/* ------------ASUNTO---------------- */}
                 <input
                   type="text"
                   className="inputPosta"
-                  id="asunto"
+                  id={asuntoStr}
                   placeholder="Asunto"
-                  name="asunto"
+                  name={asuntoStr}
                   onChange={handleChange}
                 />
-                <label htmlFor="asunto">{t("subject")}</label>
+                <label htmlFor={asuntoStr}>{t("subject")}</label>
               </div>
               <div className="inputControl span2">
                 {/* --------------MENSAJE--------------- */}
                 <textarea
-                  id="mensaje"
-                  rows="5"
+                  id={msjeStr}
+                  rows={5}
                   placeholder="Mensaje *"
-                  name="mensaje"
+                  name={msjeStr}
                   onChange={handleChange}
                   required
                 ></textarea>
-                <label htmlFor="mensaje" id="textAreaLabel">
+                <label htmlFor={msjeStr} id="textAreaLabel">
                   {t("message")}
                 </label>
               </div>

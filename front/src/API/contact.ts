@@ -1,6 +1,6 @@
 import axios from "./axios";
 
-export const sendData = (contactame) => {
+export const sendData = (contactame: emailContactInfo) => {
   return axios.post("/", contactame);
 };
 

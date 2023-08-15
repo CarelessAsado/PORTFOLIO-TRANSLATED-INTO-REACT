@@ -6,13 +6,17 @@ import cors from "cors";
 import sendEmail from "./nodemailer";
 import repoMachine, { connectPostgres } from "./db/postgres";
 import geoip from "geoip-lite";
-
-/* import { FRONTEND_URL } from "./constants"; */
+import { FRONTEND_URL } from "./constants";
 
 /*---------------------------------*/
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(cors());
+app.use(
+  cors({
+    origin: FRONTEND_URL,
+    credentials: true,
+  })
+);
 
 /*----------------------------------- */
 const PORT = process.env.PORT || 5000;
