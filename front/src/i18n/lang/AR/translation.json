@@ -14,7 +14,7 @@
   "hello": "Hola",
   "greeting": "Mucho gusto, me llamo Rodrigo",
   "git": "REPOSITORIO",
-  "aboutTitle": "Desarrollador web full stack en React, Typescript, Node, Javascript y MongoDb",
+  "aboutTitle": "Desarrollador web full stack en Next, React, Typescript, Node, Javascript y MongoDb",
   "about1": "Soy originario de Buenos Aires, Argentina. Mis años de estudio universitario y mi facilidad para los idiomas (principalmente en inglés y en francés), me dieron la capacidad para resolver problemas de manera independiente.",
   "about2": "Actualmente estoy realizando proyectos con",
   "about2bis": "y continuo perfeccionandome y adquiriendo conocimientos técnicos que permitan resolver problemas de la vida cotidiana a empresas e individuos.",
@@ -29,22 +29,6 @@
 
       "titulo": "Perfumería E-shop"
     },
-    {
-      "descripcion": "Recreación del famoso sitio con notificaciones en tiempo real (sockets). Tras registrarse, los usuarios pueden acceder a un muro público para escribir mensajes, así como acceder de manera privada a su información de usuario y editarla.",
-
-      "alt": "proyecto Rodribook",
-
-      "titulo": "RODRIBOOK WEBSITE"
-    },
-
-    {
-      "descripcion": "Portfolio que construí originalmente con Javascript puro y que luego traduje a React.Trabajé con el Intersection Observer a través de un hook personalizado, y utilicé React-i18next para la traducción del contenido.",
-
-      "alt": "PORTFOLIO",
-
-      "titulo": "De Javascript a React"
-    },
-
     {
       "descripcion": "Servicios profesionales jurídicos.",
 

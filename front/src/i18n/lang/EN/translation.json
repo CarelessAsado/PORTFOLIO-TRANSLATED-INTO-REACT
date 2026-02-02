@@ -14,7 +14,7 @@
   "hello": "Hello",
   "greeting": "Nice to meet you, my name is Rodrigo",
   "git": "REPOSITORY",
-  "aboutTitle": "Full-stack web developer in React, Typescript, MongoDb, Nodejs and Javascript",
+  "aboutTitle": "Full-stack web developer in Next, React, Typescript, MongoDb, Nodejs and Javascript",
   "about1": "I am originally from Buenos Aires, Argentina. Years of university education and my fluency in languages (mainly English and French), have allowed me to develop excellent problem-solving skills.",
   "about2": "I am currently building projects with",
   "about2bis": "and I strive daily to acquire new technical knowledge to help solve day-to-day problems individuals and companies may encounter.",
@@ -28,22 +28,6 @@
       "alt": "REACT/NODE E-COMMERCE",
 
       "titulo": "FRAGRANCE E-COMMERCE"
-    },
-
-    {
-      "descripcion": "Replica of the famous site with real-time socket notifications. Upon registration, users have access to a public area where they can post messages, and an additional private route where they can view and edit their user info.",
-
-      "alt": "Rodribook project",
-
-      "titulo": "RODRIBOOK WEBSITE"
-    },
-
-    {
-      "descripcion": "Portfolio that I originally built with pure Javascript and that I later translated into React. I used the Intersection Observer API, and translated the content with the help of React-i18n.",
-
-      "alt": "PORTFOLIO",
-
-      "titulo": "From Javascript to React"
     },
 
     {

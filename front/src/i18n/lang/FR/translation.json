@@ -14,7 +14,7 @@
   "hello": "Bonjour",
   "greeting": "Enchanté, je m'appelle Rodrigo",
   "git": "REPOSITORY",
-  "aboutTitle": "Développeur web full stack en React, Typescript, MongoDb, Nodejs et Javascript",
+  "aboutTitle": "Développeur web full stack en Next, React, Typescript, MongoDb, Nodejs et Javascript",
   "about1": "Je suis originaire de Buenos Aires, Argentine. Grâce à mes années des études universitaires et mon aisance dans les langues (notamment en anglais et en français), j'ai développé d'excellentes compétences en résolution de problèmes.",
   "about2": "Actuellement je construis des projets avec",
   "about2bis": "et je travaille tous les jours pour acquérir les connaissances techniques qui me permettent de proposer des solutions adaptées aux entreprises et aux particuliers.",
@@ -28,22 +28,6 @@
       "alt": "REACT/NODE E-SHOP",
 
       "titulo": "Parfumerie en ligne"
-    },
-
-    {
-      "descripcion": "Imitation du populaire site web avec notifications en temps réel (socket.io). Après inscription, les utilisateurs ont accès à un espace public où ils peuvent publier des messages. En outre, il y a une route privée où les utilisateurs peuvent consulter et modifier leurs données personnelles.",
-
-      "alt": "Projet Rodribook",
-
-      "titulo": "RODRIBOOK WEBSITE"
-    },
-
-    {
-      "descripcion": "Portfolio que j'ai construit d'abord avec Javascript pur et que j'ai ensuite traduit en React. J'ai utilisé l'API Intersection Observer, et j'ai ajouté les traductions avec l'aide de React-i18n.",
-
-      "alt": "PORTFOLIO",
-
-      "titulo": "Javascript à React"
     },
 
     {
